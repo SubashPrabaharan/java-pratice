@@ -30,12 +30,42 @@ public class Linked {
     }
 
     public void addEle(int val){
+        //to add ele at a first
         Node node = new Node(val);
         node.next = head;
         head = node;
-
+        //if list is empty
         if(tail==null){
             tail = head;
         }
+    }
+    public void addLast(int val){
+       //if list is empty
+        if(tail == null){
+            addEle(val);
+            return;
+        }
+
+        //to add ele at a last // refer notes for clr exp
+        Node node = new Node(val);
+        tail.next = node;
+        tail = node;
+    }
+
+
+    public void addMid(int val,int index){
+        //edge cases
+        if(index == 0 ){
+            addEle(val);
+        }
+
+        Node temp = head;
+        //traverse till needed index
+        for(int i=1;i<index;i++){
+            temp = temp.next;
+        }
+        //insert a new node
+        Node node = new Node(val,temp.next);
+        temp.next = node;
     }
 }
