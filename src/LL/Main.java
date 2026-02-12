@@ -6,8 +6,7 @@ public class Main {
         list.addEle(211);
         list.addLast(20);
         list.addMid(23,1);
-
-
+        list.deleFirst();
         list.display();
     }
 }

@@ -68,4 +68,13 @@ public class Linked {
         Node node = new Node(val,temp.next);
         temp.next = node;
     }
+    //delete
+    public int deleFirst(){
+        int value = head.val;
+        head = head.next;
+        if(head == null){
+            tail = null;
+        }
+        return value;
+    }
 }
