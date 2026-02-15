@@ -10,7 +10,7 @@ package leetcode;
 
 public class BalancedStr {
     public static void main(String[] args) {
-            String string =  "aba";
+            String string =  "zz";
         System.out.println(longstr(string));
     }
 
@@ -41,7 +41,6 @@ public class BalancedStr {
                 if(count==0){
                     count = arr[c];
                 }
-
                 else if (arr[c]!=count){
                     return false;
                 }
